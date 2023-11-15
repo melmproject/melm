@@ -16,16 +16,12 @@
 
 : sanity checks
 PATH=".:/bin:/usr/bin:/usr/local/bin:/usr/ucb:/usr/local:/usr/lbin:/etc:/usr/new:/usr/new/bin:/usr/nbin:$PATH"
-export PATH || (echo "OOPS, this isn't sh.  Desperation time.  I will feed myself to sh."; sh $0; kill $$)
+export PATH || (echo "OOPS, this isn't sh."; sh $0; kill $$)
 
 if test ! -t 0; then
-    echo "Say 'sh Configure', not 'sh <Configure'"
+    echo "Run '$SHELL Configure', not '$SHELL <Configure'"
     exit 1
 fi
-
-(alias) >/dev/null 2>&1 && \
-    echo "(I see you are using the Korn shell.  Some ksh's blow up on Configure," && \
-    echo "especially on exotic machines.  If yours does, try the Bourne shell instead.)"
 
 if test ! -d ../UU; then
     if test ! -d UU; then
@@ -752,16 +748,7 @@ echo)
 	'-n') n='' c='\c' ans='\c' ;;
 	*) n='-n' c='' ans='-n' ;;
 	esac
-	cat <<FOO
-They are not compatible!  You are probably running ksh on a non-USG system.
-I'll have to use /bin/echo instead of the builtin, since Bourne shell doesn't
-have echo built in and we may have to run some Bourne shell scripts.  That
-means I'll have to use $ans to suppress newlines now.  Life is ridiculous.
-
-FOO
-	rp="Your cursor should be here-->"
-	$echo $n "$rp$c"
-	. myread
+	echo "Nuh-uh. They are incompatible."
     fi
     $rm -f foo1 foo2
     ;;
@@ -788,7 +775,7 @@ fi
 : get calendar mode and default calendar file name
 $cat <<EOM
 
-There is a neat feature that enables scanning of the message body for
+This is a neat feature that enables scanning of the message body for
 entries to add to the users ".calendar" (or whatever) file.  These
 entries are then processed by the system program calendar.  To use
 this feature it needs to be enabled.  The name of the per user calendar
@@ -836,14 +823,14 @@ $cat <<EOM
 Not all environments are restricted to the ASCII 7-bit character set.
 For example, the ISO 8859/1 (Latin alphabet no. 1) character set,
 consisting of 8 bits and 191 printable characters, is becoming
-more and more common, especially in non-English speaking countries.
+more and more common, especially in non-English speaking regions.
 
-Unfortunately, not all isprint() functions or macros, which ELM
+Unfortunately, not all isprint() functions or macros, which melm
 uses to determine whether a character is printable or not, will
 handle non-ASCII (8-bit) characters properly.  It is suggested that you
 start with this value configured to handle 8-bit characters correctly
-and if there are problems with Elm aborting while displaying messages
-that use extended character sets to reconfigure Elm to only display
+and if there are problems with melm aborting while displaying messages
+that use extended character sets to reconfigure melm to only display
 7-bit characters.
 
 EOM
@@ -854,7 +841,7 @@ case "$d_ascii" in
 esac
 
 echo "  "
-rp="Should Elm assume that isprint() won't break on non-ASCII characters? [$dflt]"
+rp="Should melm assume that isprint() won't break on non-ASCII characters? [$dflt]"
 $echo $n "$rp $c"
 . myread
 case "$ans" in
@@ -907,6 +894,11 @@ elif $contains SIGTSTP foo >/dev/null 2>&1 ; then
 	echo exit 1 >bsd
 	echo exit 1 >usg
 	echo exit 1 >v7
+    elif $test "$uname_os" = "Linux" ; then
+	echo "Looks like a Linux distribution, but we'll see.."
+	echo exit 1 >bsd
+	echo exit 1 >usg
+	echo exit 1 >v7
     elif $test "$uname_os" = "HP-UX" ; then
 	echo "Looks like an HP-UX system, but we'll see.."
 	echo exit 1 >bsd
@@ -927,15 +919,14 @@ fi
 case "$eunicefix" in
 *unixtovms*)
     cat <<'EOI'
-There is, however, a strange, musty smell in the air that reminds me of
-something...hmm...yes...I've got it...there's a VMS nearby, or I'm a Blit.
+A VMS is not available.
 EOI
     echo "exit 0" >eunice
     d_eunice="$define"
     ;;
 *)
     echo " "
-    echo "Congratulations.  You aren't running Eunice."
+    echo "You aren't running Eunice. Good ;)"
     d_eunice="$undef"
     echo "exit 1" >eunice
     ;;
@@ -1121,7 +1112,7 @@ case "$roff" in
 esac
 $cat <<EOM
 
-The Elm documentation (Reference Guide, Configuration Guide, etc.) is set up
+The melm documentation (Reference Guide, Configuration Guide, etc.) is set up
 for troff.  If you only have nroff, it can be used, but the documentation will
 not be as readable.  If you use an alternate processor for troff/nroff
 documents it can be specified here.  Elm expects the text processor to write
@@ -1132,9 +1123,9 @@ EOM
 cont=true
 while $test "$cont" ; do
     echo " "
-    echo "Give the name of the program used to format the Elm documentation on"
+    echo "Give the name of the program used to format the melm documentation on"
     $echo $n "your system: [$dflt] $c"
-    rp="Preferred Elm documentation formatter program: [$dflt]"
+    rp="Preferred melm documentation formatter program: [$dflt]"
     . myread
     roff=$ans;
     if $test -f "$ans"; then
@@ -5552,14 +5543,14 @@ EOM
     $echo $n "$rp $c"
     . UU/myread
     case "$ans" in
-    y*) make depend && echo "Now you must run a make."
+    y*) make depend && echo "Now you must run make."
 	;;
     *)  echo "You must run 'make depend' then 'make'."
 	;;
     esac
 elif test -f Makefile; then
     echo " "
-    echo "Now you must run a make."
+    echo "Now you must run make."
 else
     echo "Done."
 fi
