@@ -56,3 +56,5 @@ repository.
 melm is a fork of Elm 2.5 and is not affiliated with the original Elm
 project. melm is maintained independently by a group of contributors
 dedicated to preserving and enhancing this powerful email client.
+Despite the program being so old, the tarball Melm was based on can
+still be downloaded [here](http://www.instinct.org/elm/files/tarballs/elm2.5.8.tar.gz).
