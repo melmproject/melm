@@ -1,7 +1,5 @@
 
-                The melm Mail System General Public License
-  		 
-
+ 	               The melm General Public License, v1.1
                     (C) Copyright 1988-1996, USENET Community Trust
 		    (C) Copyright 1986,1987, by Dave Taylor
 		    (C) Copyright 2023-now,  melm Project
@@ -49,8 +47,7 @@ Modification of the system is encouraged, providing that the portions of
 the system that are from the original still carry the appropriate copyright
 notices and that the changed sections are clearly delimited as such.  The
 authors requests copies of any changes made to ensure that the various versions
-stay reasonably in sync with each other.  Please send all revisions to
-flash@virginia.edu.
+stay reasonably in sync with each other.
 
 NOTE that it is not permitted to copy, sublicense, distribute or transfer any
 of the melm software except as expressly indicated herein.  Any attempts to
