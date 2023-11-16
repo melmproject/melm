@@ -6,7 +6,7 @@ Make.defs.SH
 Makefile.SH
 NOTICE
 Overview
-README
+README.md
 config.h.SH
 doc/Alias.guide
 doc/Config.guid
