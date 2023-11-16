@@ -8,14 +8,13 @@ and explains some of the motivation behind the various features.
 
 1. What is Elm?
 
-	melm is a "User Agent" system.
-	It is designed to run with "sendmail" or "/bin/rmail" or any
-other UNIX Mail Transport Agent (according to what's on your system)
-and is a full replacement of programs like "/bin/mail" and "mailx".
-But melm is more than just a single program, however, and includes
-programs like "frm" to list a 'table of contents' of your mail, and
-"printmail" to quickly paginate mail files (to allow 'clean'
-printouts).
+	melm is a "User Agent" system. It is designed to run with "sendmail"
+or "/bin/rmail" or any other UNIX Mail Transport Agent (according to
+what's on your system) and is a full replacement of programs like
+"/bin/mail" and "mailx". But melm is more than just a single program,
+however, and includes programs like "frm" to list a 'table of contents'
+of your mail, and "printmail" to quickly paginate mail files (to allow
+'clean' printouts).
 
 2. What's New about melm?
 
