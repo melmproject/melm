@@ -66,6 +66,6 @@ wget http://www.instinct.org/elm/files/tarballs/elm2.5.8.tar.gz || \
 curl -O http://www.instinct.org/elm/files/tarballs/elm2.5.8.tar.gz
 ```
 
-If the link is ever broken you can browse the source code [here](https://github.com/TylerMS887/melm/tree/2.5-backup).
+If the link is ever broken you can browse the source code [here](https://github.com/melmproject/elm-archive).
 
 [elmtar]: http://www.instinct.org/elm/files/tarballs/elm2.5.8.tar.gz
