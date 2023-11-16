@@ -1,44 +1,45 @@
 
-                The Elm(tm) Mail System General Public License
+                The melm Mail System General Public License
   		 
 
                     (C) Copyright 1988-1996, USENET Community Trust
 		    (C) Copyright 1986,1987, by Dave Taylor
+		    (C) Copyright 2023-now,  melm Project
 
 
 			  	COPYING POLICIES
 
      Permission is hereby granted for copying and distribution of copies of
-  the Elm source files, and that of any part thereof, subject to the following 
+  the melm source files, and that of any part thereof, subject to the following 
   license conditions:
 
         1. You may, without additional permission from the authors, distribute 
-           Elm or components of Elm, with or without additions developed by 
-           you or by others at no charge.  You may also distribute Elm along 
+           melm or components of melm, with or without additions developed by 
+           you or by others at no charge.  You may also distribute melm along 
            with any other product for sale, provided that the cost of the 
-           bundled package is the same regardless of whether Elm is included,
-           and provided that those interested only in Elm must be notified 
-           that it is a product freely available from the Elm Development Group.
+           bundled package is the same regardless of whether melm is included,
+           and provided that those interested only in melm must be notified 
+           that it is a product freely available from the melm Development Group.
 
         2. You may, without additional permission from the authors, distribute 
-	   copies of the Elm Documentation, with or without additions developed by 
+	   copies of the melm Documentation, with or without additions developed by 
            you or by others at no charge or at a charge that covers the cost of
-	   reproducing the copies, provided that the Elm copyright notice is
+	   reproducing the copies, provided that the melm copyright notice is
 	   retained.
 
-        3. Furthermore, if you distribute Elm software or parts of Elm, with 
+        3. Furthermore, if you distribute melm software or parts of melm, with 
            or without additions developed by you or others, then you must 
-           either make available the source to all portions of the Elm system 
+           either make available the source to all portions of the melm system 
            (exclusive of any additions made by you or by others) upon request, 
            or instead you may notify anyone requesting source that it is 
-           freely available from the Elm Development Group.
+           freely available from the melm Development Group.
 
         4. In addition, you may not omit any of the copyright notices
            on either the source files, the executable file, or the 
            documentation, and
 
         5. Also, you may not omit transmission of this License agreement with 
-           whatever portions of Elm that are distributed.
+           whatever portions of melm that are distributed.
 
         6. Lastly, any users of this software must be notified that it is
            without warrantee or guarantee of any nature, express or implied, 
@@ -58,16 +59,6 @@ stay reasonably in sync with each other.  Please send all revisions to
 flash@virginia.edu.
 
 NOTE that it is not permitted to copy, sublicense, distribute or transfer any
-of the Elm software except as expressly indicated herein.  Any attempts to
+of the melm software except as expressly indicated herein.  Any attempts to
 do otherwise will be considered a violation of this license and your rights
-to the Elm software will be voided.
-
-Comments on the system and/or this licensing agreement is encouraged.  Send
-electronic mail to "taylor@intuitive.com".  This license was written with
-help from Scott McGregor.  Thanks Scott!
-
-----
-Elm is a trademark of Dave Taylor. 
-
-NOTE: Elm is now in the public trust. Comments, suggestions, bug reports and the
-like should be sent to Bill Pemberton; flash@virginia.edu
+to the melm software will be voided.
