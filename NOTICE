@@ -19,7 +19,7 @@
            with any other product for sale, provided that the cost of the 
            bundled package is the same regardless of whether melm is included,
            and provided that those interested only in melm must be notified 
-           that it is a product freely available from the melm Development Group.
+           that it is a product freely available from the Melm Project.
 
         2. You may, without additional permission from the authors, distribute 
 	   copies of the melm Documentation, with or without additions developed by 
@@ -32,7 +32,7 @@
            either make available the source to all portions of the melm system 
            (exclusive of any additions made by you or by others) upon request, 
            or instead you may notify anyone requesting source that it is 
-           freely available from the melm Development Group.
+           freely available from the Melm Project.
 
         4. In addition, you may not omit any of the copyright notices
            on either the source files, the executable file, or the 
@@ -45,12 +45,6 @@
            without warrantee or guarantee of any nature, express or implied, 
            nor is there any fitness for use represented.
 
-Software is a malleable thing - especially UNIX - and the authors can in no
-way guarantee that using this program will not cause grievous damage to your
-system.  Of course this isn't anticipated, but if it does happen, the authors
-cannot be held liable for any damages either directly or indirectly caused
-by this event.
-
 Modification of the system is encouraged, providing that the portions of 
 the system that are from the original still carry the appropriate copyright
 notices and that the changed sections are clearly delimited as such.  The
@@ -62,3 +56,6 @@ NOTE that it is not permitted to copy, sublicense, distribute or transfer any
 of the melm software except as expressly indicated herein.  Any attempts to
 do otherwise will be considered a violation of this license and your rights
 to the melm software will be voided.
+
+The original version of the Elm(tm) license can be found at:
+https://raw.githubusercontent.com/melmproject/melm/2.5-backup/NOTICE
