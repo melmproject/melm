@@ -263,7 +263,7 @@ d_xenix=''
 d_bsd=''
 CONFIG=''
 : set package name
-package=elm2.5
+package=melm2.6.0
 
 # Revision 1.2  1995/06/30  14:56:06  wfp5p
 # Alpha 5
@@ -315,14 +315,14 @@ if test ! -f $source_dir/MANIFEST ; then
 		echo "Please reload the software and try again."
 		exit 1
 	fi
-	echo "Aha!  I found them."
+	echo "Found the required files to configure."
 	echo "  build directory  = $build_dir"
 	echo "  source directory = $source_dir"
 fi
 
 : Now test for existence of everything in MANIFEST
 
-echo "First let's make sure your kit is complete.  Checking..."
+echo "Checking to make sure your kit is complete..."
 awk '$1 !~ /PACKINGLIST/ {print $1}' $source_dir/MANIFEST | split -100
 rm -f missing
 for filelist in x??; do
@@ -349,7 +349,7 @@ d_newshome="/usr/NeWS"
 defvoidused=7
 attrlist="mc68000 sun gcos unix ibm gimpel interdata tss os mert pyr"
 attrlist="$attrlist vax pdp11 i8086 z8000 u3b2 u3b5 u3b20 u3b200"
-attrlist="$attrlist hpux hp9000s300 hp9000s500 hp9000s800"
+attrlist="$attrlist hpux hp9000s300 hp9000s500 hp9000s800 linux"
 attrlist="$attrlist ns32000 ns16000 iAPX286 mc300 mc500 mc700 sparc"
 attrlist="$attrlist nsc32000 sinix xenix venix posix ansi M_XENIX"
 attrlist="$attrlist $mc68k __STDC__ UTS M_I8086 M_I186 M_I286 M_I386"
@@ -391,7 +391,7 @@ rm -f grimble
 case "$contains" in
 contains*)
     echo " "
-    echo "AGH!  Grep doesn't return a status.  Attempting remedial action."
+    echo "Grep doesn't return a status.  Attempting remedial action."
     cat >contains <<'EOSS'
 grep "$1" "$2" >.greptmp && cat .greptmp && test -s .greptmp
 EOSS
@@ -412,7 +412,7 @@ if sh -c '#' >/dev/null 2>&1 ; then
     shsharp=true
     spitshell=cat
     echo " "
-    echo "Okay, let's see if #! works on this system..."
+    echo "Checking if #! works on this system..."
     e=/bin/echo; test -f $e || e=/usr/bin/echo
     echo "#!$e hi" > try
     $eunicefix try
@@ -441,7 +441,7 @@ else
     chmod +x spitshell
     $eunicefix spitshell
     spitshell=`pwd`/spitshell
-    echo "I presume that if # doesn't work, #! won't work either!"
+    echo "Shebangs like #!$SHELL most likely won't work either."
     sharpbang=': use '
 fi
 
@@ -459,9 +459,9 @@ EOSS
 chmod +x try
 $eunicefix try
 if ./try; then
-    echo "Yup, it does."
+    echo "It does."
 else
-    echo "Nope.  You may have to fix up the shell scripts to make sure sh runs them."
+    echo "It doesn't.  You may have to fix up the shell scripts to make sure sh runs them."
 fi
 rm -f try today
 
@@ -479,7 +479,7 @@ EOM
     n=''
     c='\c'
 fi
-echo $n "Type carriage return to continue.  Your cursor should be here-->$c"
+echo $n "Type enter to continue.  Your cursor should be here-->$c"
 read ans
 rm -f .echotmp
 
@@ -524,7 +524,7 @@ This installation shell script will examine your system and ask you questions
 to determine how the $package package should be installed.  If you get stuck
 on a question, you may use a ! shell escape to start a subshell or execute
 a command.  Many of the questions will have default answers in square
-brackets--typing carriage return will give you the default.
+brackets--typing enter will give you the default.
 
 On some of the questions which ask for file or directory names you are
 allowed to use the ~name construct to specify the login directory belonging
@@ -532,7 +532,7 @@ to "name", even if you don't have a shell which knows about that.  Questions
 where this is allowed will be marked "(~name ok)".
 
 EOH
-rp="[Type carriage return to continue]"
+rp="[Type enter to continue]"
 echo $n "$rp $c"
 . myread
 cat <<EOH
@@ -553,7 +553,7 @@ currently.  The easiest thing to do is to edit config.sh and rerun all the
 SH files.  Configure will offer to let you do this before it runs the SH files.
 
 EOH
-rp="[Type carriage return to continue]"
+rp="[Type enter to continue]"
 echo $n "$rp $c"
 . myread
 
@@ -1855,7 +1855,7 @@ Do NOT specify libraries (-lwhatever) here.  Most systems will not
 need any special flags, in which case specify "none".
 
 EOH
-rp="Any additional ld flags (NOT including libraries)? [$dflt]"
+rp="Any additional ld flags (do NOT add libraries)? [$dflt]"
 $echo $n "$rp $c"
 . myread
 case "$ans" in
@@ -5480,7 +5480,7 @@ CONFIG=true
 echo " "
 dflt=''
 fastread=''
-echo "If you didn't make any mistakes, then just type a carriage return here."
+echo "If you didn't make any mistakes, then just type a enter here."
 rp="If you need to edit config.sh, do it as a shell escape here:"
 $echo $n "$rp $c"
 . UU/myread
@@ -5536,14 +5536,14 @@ EOM
     $echo $n "$rp $c"
     . UU/myread
     case "$ans" in
-    y*) make depend && echo "Now you must run make."
+    y*) make depend && echo "Now run make."
 	;;
-    *)  echo "You must run 'make depend' then 'make'."
+    *)  echo "You must run 'make depend' then make."
 	;;
     esac
 elif test -f Makefile; then
     echo " "
-    echo "Now you must run make."
+    echo "Makefile generated. Now run make."
 else
     echo "Done."
 fi
