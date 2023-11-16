@@ -11,17 +11,10 @@
 # $Header: Head.U,v 2.0 88/06/28 23:13:13 lwall Locked $
 #
 # Yes, you may rip this off to use in other distribution packages.
-# (Note: this Configure script was generated automatically.  Rather than
-# working with this copy of Configure, you may wish to get metaconfig.)
 
 : sanity checks
 PATH=".:/bin:/usr/bin:/usr/local/bin:/usr/ucb:/usr/local:/usr/lbin:/etc:/usr/new:/usr/new/bin:/usr/nbin:$PATH"
 export PATH || (echo "OOPS, this isn't sh."; sh $0; kill $$)
-
-if test ! -t 0; then
-    echo "Run '$SHELL Configure', not '$SHELL <Configure'"
-    exit 1
-fi
 
 if test ! -d ../UU; then
     if test ! -d UU; then
