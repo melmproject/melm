@@ -58,3 +58,5 @@ project. melm is maintained independently by a group of contributors
 dedicated to preserving and enhancing this powerful email client.
 Despite the program being so old, the tarball Melm was based on can
 still be downloaded [here](http://www.instinct.org/elm/files/tarballs/elm2.5.8.tar.gz).
+
+If the link is ever broken you can browse the source code [here](https://github.com/TylerMS887/melm/tree/2.5-backup).
