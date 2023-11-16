@@ -32,8 +32,8 @@ and it will build the correct return addresses.
 
 3. What systems does melm work on?
 
-	The Elm development group uses almost every UNIX system out
-there between all of its volunteers.  Elm runs on FreeBSD, Linux,
+	The melm development group uses almost every UNIX system out
+there between all of its volunteers.  melm runs on FreeBSD, Linux,
 HP-UX, traditional Unix, Hurd, and should run on almost any UNIX
 system without any modifications.
 
@@ -53,13 +53,13 @@ abandonware and hasn't been updated since 2005.
 
 6. Disclaimers 
 
-	The melm project will deny all liability for any
-damages, either real or imagined, due to the execution of this program
-or anything related to either the software or the system.  Furthermore,
-the entire system and all source within, including the presentation
-screens and commands, are legally copyrighted by the author, and while
-they can be used, and abused, for public domain systems, it will be in 
-violation of the law if used in systems or programs sold for profit.
+	The melm project will deny all liability for any damages, either
+real or imagined, due to the execution of this program or anything related
+to either the software or the system.  Furthermore, the entire system and all
+source within, including the presentation screens and commands, are legally
+copyrighted by the author, and while they can be used, and abused, for public
+domain systems, it will be in  violation of the law if used in systems or
+programs sold for profit.
 
 	By installing the mailer or extracting it from the network,
 you are agreeing to the above disclaimer.
