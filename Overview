@@ -24,11 +24,6 @@ further use, however, users will find that melm is also quite a bit
 easier to use, and quite a bit more intelligent about sending mail
 and so on.
 
-	For example, say you're on Tor and receive a message from
-someone on the Internet. The sender also cc'd another person on the
-Internet.  With melm you can simply press G or click "Group reply"
-and it will build the correct return addresses.
-
 3. What systems does melm work on?
 
 	The melm development group uses almost every UNIX system out
@@ -39,7 +34,7 @@ system without any modifications.
 4. Does it obey existing mail standards?
 
 	Yes. Example: to ensure that the date field, the "From:" line
-and so on were all added in the correct format.  The program is 99.9%
+and so on were all added in the correct format.  The program is mostly
 correct according to the RFC-822 electronic mail header protocol
 guide.
 
@@ -47,8 +42,8 @@ guide.
 
 	melm is designed to run on modern systems that Elm normally
 would not support. If you run traditional Unix systems like System
-V, you will probably want to use Elm instead, but Elm is classified as
-abandonware and hasn't been updated since 2005.
+V, you will probably want to use Elm instead despite being classified
+as abandonware.
 
 6. Disclaimers 
 
@@ -65,5 +60,5 @@ you are agreeing to the above disclaimer.
 
 Original: March 13th, 1986
 Modified: November 16th, 2023
-	TylerMS887, melm Founder
+	Rickdot Bot - melm Founder
 	melm Project
