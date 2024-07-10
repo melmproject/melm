@@ -4,7 +4,7 @@ Instruct
 MANIFEST
 Make.defs.SH
 Makefile.SH
-COPYING
+LICENSE
 Overview
 README.md
 config.h.SH
