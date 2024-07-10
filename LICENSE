@@ -1,5 +1,5 @@
 
- 	                    The melm General Public License, v1.1
+ 	               The melm General Public License, v1.1
                     (C) Copyright 1988-1996, USENET Community Trust
                         (C) Copyright 1986,1987, by Dave Taylor
                          (C) Copyright 2023-now,  melm Project
@@ -37,7 +37,9 @@
            documentation, and
 
         5. Also, you may not omit transmission of this License agreement with 
-           whatever portions of melm that are distributed.
+           whatever portions of melm that are distributed. You must follow any
+	   rules mentioned in the original license.
+	   https://raw.githubusercontent.com/melmproject/elm-archive/main/NOTICE
 
         6. Lastly, any users of this software must be notified that it is
            without warrantee or guarantee of any nature, express or implied, 
@@ -53,6 +55,3 @@ NOTE that it is not permitted to copy, sublicense, distribute or transfer any
 of the melm software except as expressly indicated herein.  Any attempts to
 do otherwise will be considered a violation of this license and your rights
 to the melm software will be voided.
-
-The original version of the Elm(tm) license can be found at:
-https://raw.githubusercontent.com/melmproject/elm-archive/main/NOTICE
