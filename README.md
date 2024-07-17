@@ -2,7 +2,7 @@
 
 **Introduction**
 
-melm is a fork of the Elm Mail System, a powerful and versatile email
+melm, aka Elm 2.6, is a fork of the Elm Mail System, a powerful and versatile email
 client originally developed for Unix-like systems. This fork aims to
 continue the maintenance and development of Elm while ensuring
 compatibility with modern operating systems and email protocols.
