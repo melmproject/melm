@@ -1,56 +1,31 @@
 				Instructions
 				------------
 
-		        Last Update: $Date: 1995/07/18 18:59:30 $
-
-
-	This file contains instructions on how to create and install
-the entire ELM mail system.  It should be read BEFORE any attempts
-are made at actually creating and/or installing any of the software
-contained herein!
+	This document provides comprehensive instructions for building
+and installing the MELM mail system. It is essential to thoroughly
+review this file prior to initiating the creation and installation
+of the software contained within.
 
 	It should be pretty easy to build the Elm package.  First,
 you need to unpack all of the files from the source distribution.
 Then run the "Configure" package configuration script.  Most people
 will do this simply by saying:
 
-	    $ cd <wherever you're keeping the Elm sources>
+	    $ cd /path/to/melm-main
 	    $ sh Configure
 
-    |
-    | Note:  This sidebar applies ONLY to people who wish to build
-    | Elm in a directory other than where the sources reside.
-    |
-    | Although most people build Elm right in the source directory, you
-    | can build it anywhere you want.  This is handy, for instance, if
-    | you want to cross-mount your source tree across the network and
-    | share the sources among multiple systems.  All it takes is a make(1)
-    | that understands VPATH.  Several, such as GNU make, do.  If you
-    | want to build Elm this way, instead of the above commands, say:
-    |
-    |	    $ mkdir <directory where you want to build Elm>
-    |	    $ cd <directory where you want to build Elm>
-    |	    $ sh <wherever you're keeping the Elm sources>/Configure
-    |
-    | If, at a later time, you move the source tree somewhere else, you
-    | MUST reconfigure the source directory setting before you will be
-    | able to recompile the Elm package.  To do this, rerun Configure
-    | with the "-d" switch (to skip the questions and just accept all
-    | the default answers).
-    |
-
-	Answer the questions of that program, then let it create the
-localized Makefiles and system definition files for you.  When it's
-done you can double check the configuration (or customize it further)
-by reading the Configuration Guide and then rerunning Configure.
-There are lots of neat features that are unique to this mailer - it's
-worth a quick perusal at least!
+	Just answer the program's questions, and it'll take care of
+generating the necessary Makefiles and system definition files for you.
+Once it's done, you can double-check the setup or customize it further
+by reading the Configuration Guide and then re-running Configure. There
+are some cool features unique to this mailer, so take a quick look and
+see what you can discover!
 
 	Once you're happy with the localized files, you then need to
-create the documentation (so there's a bit of a catch-22 that you need
-to format the Configuration guide before you are happy with the
-localization but can't do that until you're happy with the
-localization...oh well).
+create the documentation.  There's a paradoxical situation where you
+need to finalize the Configuration guide before you're satisfied with
+the localization, but you can't do that until you're satisfied with the
+localization itself.
 
 	$
 
@@ -62,21 +37,10 @@ it), do the following:
 	$ make all > MAKELOG 2>&1 &
 	$ tail -f MAKELOG
 
-    (if you're in "csh", substitute: "make all >& MAKELOG &")
+This may take a fair while. Be patient. You can do something else in
+your free time while you wait.
 
-This will take a fair while, so it's recommended that you go and eat 
-lunch or play a game for a while!! (alternatively, spend lots of money
-on a really FAST machine and blink your eyes a few times...)
-
-Assuming there are no errors during compilation (we'll have to assume
-that for the moment) you should now be able to list the directory "bin"
-and find the following files:
-
-	answer      elmalias    frm         newalias    prlong
-	checkalias  fastmail    listalias   newmail     readmsg
-	elm         filter      messages    printmail
-
-next, you can install all the software on your system by;
+You can install all the software on your system by executing
 
 	$ make install
 	
@@ -90,25 +54,18 @@ use that instead.
 Finally, we're just about done!   The final checks can be made
 by the following commands:
 
-	$ elm -z
+	$ elm
 
 should say "no mail" if nothing's in your incoming mailbox or should
 start up the Elm program if there is, and
 
 	$ elm -f test/test.mail
 
-should read in EIGHT messages from various people.  While here, try to
-A)lias, A)lias current message for each of the eight messages to
-confirm that the reply/address system is working okay.  Now Q)uit
-without having marked anything for deletion...answer the questions
-accordingly.
+should read in 3 different messages from "Foobar Incorporated".
 
-If you get this far you're in wonderful shape!  In fact, you're done!
+Congratulations!  You've just installed Melm!
 
-Congratulations!  You've just installed one of the best electronic mail
-systems available today on your machine (if I say so myself!)
-
-IF UPGRADING FROM AN EARLIER VERSION OF ELM, even 2.4 beta, it will
+If transitioning from original Elm or older versions of Melm, it will
 be necessary for all users alias files, as well as the systems alias
 file, be upgraded to the new format.  Also some error checking of
 alias files has been added.  All users should run the newalias command.
@@ -138,13 +95,4 @@ That's it!
 
 	(C) Copyright 1988-1995 by the Usenet Community Trust
 	(C) Copyright 1986,1987 by Dave Taylor
-
-Elm is now in the public trust.  Bug reports, comments, suggestions,
-etc. should be sent to:
-
-	Elm group's address:	flash@virginia.edu
-
-	Mail address:		Bill Pemberton
-				University of Virginia - ITC
-				PO Box 9029
-				Charlottesville, VA 22906
+	(C) Copyright 2023-present by the Melm Project
