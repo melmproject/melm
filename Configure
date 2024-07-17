@@ -2038,8 +2038,7 @@ case "$libs" in
 esac
 
 if $test "$uname_os" = "Linux" ; then
-    echo "You've got Linux, using /usr/lib/libc.a"
-    libc=/usr/lib/libc.a
+    libc=/usr/lib/x86_64-linux-gnu/libc.so.6
 else
 set /usr/ccs/lib/libc.so
 test -f $1 || set /usr/lib/libc.so
