@@ -56,16 +56,5 @@ repository.
 melm is a fork of Elm 2.5 and is not affiliated with the original Elm
 project. melm is maintained independently by a group of contributors
 dedicated to preserving and enhancing this powerful email client.
-Despite the program being so old, the official Elm source code melm was
-based on can still be downloaded [here][elmtar].
-It probably won't work in modern browsers but you can run this command
-to retrieve it using your terminal:
-
-```shell
-wget http://www.instinct.org/elm/files/tarballs/elm2.5.8.tar.gz || \
-curl -O http://www.instinct.org/elm/files/tarballs/elm2.5.8.tar.gz
-```
-
-If the link is ever broken you can browse the source code [here](https://github.com/melmproject/elm-archive).
-
-[elmtar]: http://www.instinct.org/elm/files/tarballs/elm2.5.8.tar.gz
+To see the original code, see [our archive](https://github.com/melmproject/archive)
+which you are allowed to download under the original license of the software.
