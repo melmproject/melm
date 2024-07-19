@@ -58,3 +58,4 @@ project. melm is maintained independently by a group of contributors
 dedicated to preserving and enhancing this powerful email client.
 To see the original code, see [our archive](https://github.com/melmproject/archive)
 which you are allowed to download under the original license of the software.
+Notes about the archive are [here](https://github.com/melmproject/archive/issues/1).
